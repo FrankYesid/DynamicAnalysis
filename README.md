@@ -1,16 +1,14 @@
 # Dynamic Analysis
 Dynamic Analysis - Analysis of signals
- 
 
 # === Files  ===
-README					this file
-INSTALL					how to install 
-DynamicAnalysis_install installer
-LICENSE					
+README					this file<br>
+INSTALL					how to install <br>
+DynamicAnalysis_install installer<br>
+LICENSE					Copyright (c) 2020, DynamicAnalysis All rights reserved.<br>
 
 
 # Sub-directories:
-
  - /functions 		- All distributed functions.
  - /graphics		- graph display.
  - /data 			- data using in tutorials and references.
