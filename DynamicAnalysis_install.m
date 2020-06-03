@@ -4,7 +4,7 @@
 % 1) extract the files and
 % 2) save the Dynamic... files in <your_directory>
 % 3) start matlab
-%    cd <your_directory>
+%    cd <your_directory> 
 %    Name_installer 
 % 4) For a permanent installation, save the default path with 
 %     PATHTOOL and click on the "SAVE" button. 
