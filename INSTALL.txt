@@ -1,0 +1,12 @@
+% Dynamic Analysis runs on Matlab. 
+
+% 1) extract the files and
+% 2) save the Dynamic Analysis files in <your_directory>
+% 3) start Matlab and change directory to .../Dynamic Analysis/
+% 4) run DynamicAnalysis_install.m, this adds all the directories into your path. 
+
+% aplication of analysis in directories Subject-level and Group-level For each estimator.
+
+% The following help commands
+% provide some more information.
+https://github.com/lfvelasquezm/DynamicAnalysis

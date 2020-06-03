@@ -1,26 +1,24 @@
-# Dynamic_Modeling
- Dynamic Modeling - Analysis of signals
- 
+# Dynamic Analysis
 ===================
+Dynamic Analysis - Analysis of signals
+ 
 
 === Files  ===
-
 README		this file
 INSTALL		how to install 
 
 
 
-DOC/* Documentation
-Graph/* 
-
 # Sub-directories:
 
  - /functions - All distributed functions 
- - /
+ - /graphics
  - /data -   data using in tutorials and references
- - /
+ - /demo -   tutorials
+ - /Subject-level -
+ - /Group-level   - 
 
-References:
+# References:
 ===========
 -- general, overview
 
