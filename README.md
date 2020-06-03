@@ -1,9 +1,8 @@
 # Dynamic Analysis
-===================
 Dynamic Analysis - Analysis of signals
  
 
-#=== Files  ===
+# === Files  ===
 README					this file
 INSTALL					how to install 
 DynamicAnalysis_install installer
@@ -20,6 +19,5 @@ LICENSE
  - /Group-level   	- .
 
 # References:
-# ===========
 -- general, overview
 
