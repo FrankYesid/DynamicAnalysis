@@ -1,6 +1,6 @@
 # Dynamic Analysis
 ===================
-Dynamic Analysis - Analysis of signals
+Dynamic Analysis - Analysis of signals\
  
 
 === Files  ===
