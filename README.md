@@ -13,8 +13,8 @@ LICENSE					- Copyright (c) 2020, DynamicAnalysis All rights reserved.<br>
  - /graphics		- graph display.
  - /data 			- data using in tutorials and references.
  - /demo 			- tutorials.
- - /Subject-level 	- .
- - /Group-level   	- .
+ - /Subject-level 	- functions of the estimators by subjects.
+ - /Group-level   	- functions of the estimators by groups. 
 
 # References:
 -- general, overview
