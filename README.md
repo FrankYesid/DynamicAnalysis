@@ -2,10 +2,10 @@
 Dynamic Analysis - Analysis of signals
 
 # === Files  ===
-README					this file<br>
-INSTALL					how to install <br>
-DynamicAnalysis_install installer<br>
-LICENSE					Copyright (c) 2020, DynamicAnalysis All rights reserved.<br>
+README					- this file<br>
+INSTALL					- how to install <br>
+DynamicAnalysis_install - installer<br>
+LICENSE					- Copyright (c) 2020, DynamicAnalysis All rights reserved.<br>
 
 
 # Sub-directories:
