@@ -50,5 +50,5 @@ path([Dyn_DIR_Gr,'/Connectivity'],path);	% display and presentation
 path([Dyn_DIR_Gr,'/ERD'],path);	% display and presentation
 
 
-disp('Dynamic Analysis... activated');
-disp('	If you want DynamicAnalysis... permanently installed, use the command SAVEPATH.')
+disp('  --------------------- Dynamic Analysis... activated --------------------------- ');
+disp('	If you want DynamicAnalysis... permanently installed, use the command SAVEPATH. ')
