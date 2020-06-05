@@ -13,7 +13,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear; clc %
 warning off
-%% Load data
-load('')
+%% Load data of ERDs
+load X_erd_s8_class
+
+
+
+
 
  

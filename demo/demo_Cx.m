@@ -14,6 +14,6 @@
 % Connectivity.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear; clc;
-warning off
-%% Load data
+warning off 
+%% Load data 
 load('')
