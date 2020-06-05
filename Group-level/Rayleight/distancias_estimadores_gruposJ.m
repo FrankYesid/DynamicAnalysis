@@ -5,8 +5,8 @@ close all
 
 %%
 data = 'Giga'; % BCI2a Giga
-method = 'J';%ERD
-ch = [8,12];
+method = 'J';
+ch = [8,12]; 
 %%
 load(['Results\' data '\' method '\best_Resultados_Grupos'])
 [nfeat,nch,ngroup] = size(Xga_{1});
