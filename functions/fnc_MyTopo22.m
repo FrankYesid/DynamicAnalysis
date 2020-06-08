@@ -1,7 +1,9 @@
+function fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,tex,Color)
 % %% Function to graph the different topoplots. %%
 % fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,tex,Color)
 % rel       -   Vector of weights 1xN.
 % pos       -   Positions vector Nx2.
+% sel       -   Channels selection.
 % label     -   tag cell Nx1.
 % lims      -   vector colorbar limits [min max].
 % cur       -   boolean enables contour lines 1,0.
@@ -9,7 +11,6 @@
 % t_e       -   size of the electrodes.
 % database  -   selected database.
 % HeadModel -   model of the human head.
-% type      -   type of topoplot.
 % tex       -   ability to plot labels of channels 1,0.
 % Example:
 %       database = 2; % BCI_competition_IV_dataset_2a 
@@ -20,7 +21,7 @@
 %       t_e = 15;                      % size electrodes.
 %       M1.xy = elec_pos;              % position of channels.
 %       M1.lab = Channels;             % names of channels.
-%       sel = 1:22;
+%       sel = 1:22;                    % channels selection.
 %       rel = ones(1,22);
 %       fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,tex,Color)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -31,7 +32,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Note: run BIOSIG for functions of load dataset.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,tex,Color)
 for i=1:2
     pos(:,i) = 0.9.*((pos(:,i)-min(pos(:,i)))/range(pos(:,i))-0.5);
 end
