@@ -1,4 +1,12 @@
 function [tr_ind, ts_ind, cl] = fncIndexingdata(cv,y,fold)
+%%
+% [tr_ind, ts_ind, cl] = fncIndexingdata(cv,y,fold)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright (C) 2019 Signal Processing and Recognition Group.
+% Universidad Nacional de Colombia.
+% L.F. Velasquez-Martinez
+% F.Y. Zapata-Castaño.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 tr_ind   = cv.training(fold);
 ts_ind   = cv.test(fold);
 
@@ -11,5 +19,4 @@ for ttr = 1:numel(tr_ind)
         al = al+1;
     end
 end
-% cl = indx.*y;
 end

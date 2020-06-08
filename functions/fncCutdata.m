@@ -1,7 +1,21 @@
-
 function Xdr = fncCutdata(Xd_,tini,tfin,fs) 
-
-%% recortar 
+%% Function of record signal.
+% 
+% 
+% 
+% 
+% Example:
+% 
+% 
+% 
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright (C) 2019 Signal Processing and Recognition Group.
+% Universidad Nacional de Colombia.
+% L.F. Velasquez-Martinez
+% F.Y. Zapata-Castaño.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% record 
 ini = tini*fs;%0.1*fs;
 fin = tfin*fs;
 Xdr = cell(1,length(Xd_));
@@ -11,6 +25,6 @@ for i = 1:length(Xd_)
         [samples,~] = size(Xf_{k});
         lags = 1:samples;  
         pos = find(lags<fin+1 & lags>ini);
-        Xdr{i}{k} = Xf_{k}(pos,:);  
+        Xdr{i}{k} = Xf_{k}([pos],:);  
     end
 end

@@ -1,5 +1,11 @@
-
 function [RP] = fncChannelcorr(X,Y)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright (C) 2019 Signal Processing and Recognition Group.
+% Universidad Nacional de Colombia.
+% L.F. Velasquez-Martinez
+% F.Y. Zapata-Castaño.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 R = nan(size(X,1),1);
 P = nan(size(X,1),1);
 for i = 1:size(X,1)

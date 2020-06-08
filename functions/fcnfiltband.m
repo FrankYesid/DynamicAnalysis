@@ -15,23 +15,21 @@ function [Xfreq] = fcnfiltband(X,fs,freq,n)
 % Xf{trial}(samples x chan)
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Copyright (C) 2017 Signal Processing and Recognition Group
+% Copyright (C) 2017 Signal Processing and Recognition Group.
+% Universidad Nacional de Colombia.
 % L.F. Velasquez-Martinez 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%
 %  filter order
 if nargin < 4  
    n = 5; % by default 
 end
 
-%Filter desing
-wn_freq = [freq(1)/(0.5*fs) freq(2)/(0.5*fs)]; %
-[b_freq,a_freq] = butter(n,wn_freq);  % filtrado
+% Filter desing
+wn_freq = [freq(1)/(0.5*fs) freq(2)/(0.5*fs)]; 
+% Filter
+[b_freq,a_freq] = butter(n,wn_freq); 
 
 % show filter response
-%freqz(b_alpha,a_alpha,512,fs)
-%title('n = 5 Butterworth band pass Filter')
 tr = length(X);
 Xfreq = cell(1,tr);
 

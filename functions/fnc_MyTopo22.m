@@ -1,5 +1,5 @@
 function fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,tex,Color)
-% %% Function to graph the different topoplots. %%
+%% Function to graph the different topoplots. %%
 % fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,tex,Color)
 % rel       -   Vector of weights 1xN.
 % pos       -   Positions vector Nx2.
@@ -14,7 +14,6 @@ function fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,te
 % tex       -   ability to plot labels of channels 1,0.
 % Example:
 %       database = 2; % BCI_competition_IV_dataset_2a 
-%       type = 4;
 %       tex = 0;
 %       load('electrodesBCICIV2a.mat') 
 %       load('HeadModel.mat')          % model of the head.
@@ -22,15 +21,13 @@ function fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,te
 %       M1.xy = elec_pos;              % position of channels.
 %       M1.lab = Channels;             % names of channels.
 %       sel = 1:22;                    % channels selection.
-%       rel = ones(1,22);
+%       rel = ones(1,22);              % relevance of channels.
 %       fnc_MyTopo22(rel,sel,pos,label,lims,ticks,t_e,database,HeadModel,cur,tex,Color)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Copyright (C) 2019 Signal Processing and Recognition Group.
 % Universidad Nacional de Colombia.
 % L.F. Velasquez-Martinez
 % F.Y. Zapata-Castaño.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Note: run BIOSIG for functions of load dataset.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 for i=1:2
     pos(:,i) = 0.9.*((pos(:,i)-min(pos(:,i)))/range(pos(:,i))-0.5);

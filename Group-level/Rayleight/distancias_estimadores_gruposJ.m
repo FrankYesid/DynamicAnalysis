@@ -1,22 +1,26 @@
 %% Template for using the EEG analysis.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Experiment: Group .
+% Experiment: Group - Rayleight.
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Copyright (C) 2019 Signal Processing and Recognition Group.
+% Copyright (C) 2020 Signal Processing and Recognition Group.
 % Universidad Nacional de Colombia.
 % L.F. Velasquez-Martinez
 % F.Y. Zapata-Castaño.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-clear; clc %
+clear; clc          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-data = 'DI'; % DI = BCI2a, DII = Giga
-method = 'J';
+data   = 'DI';      % DI = BCI2a, DII = Giga
+method = 'Rayleight'; % Rayleight
+%% parameters
 if strcmp(data,'DI')
-    ch = [8,12]; % channels C3 an C4.
+    ch = [8,12];    % channels C3 an C4.
 elseif strcmp(data,'DII')
-    ch = [13,50];% channels C3 an C4.
+    ch = [13,50];   % channels C3 an C4.
 end
+freqs = [3,7,9,11]; % frecuencias 
+
+% load results group
 load(['data' filesep data filesep 'results' filesep 'best_Resultados_Grupos'])
 [nfeat,nch,ngroup] = size(Xga_{1});
 ng = 2:ngroup; ng = flip(ng);
@@ -28,7 +32,10 @@ elseif strcmp(data,'DII')
     bs = S1(1:23);
 end
 posf = 1;
-for fr = [3,7,9,11]
+group_features = zeros(numel(freqs),size(ng));
+
+%% estimation groups
+for fr = freqs
     pos = 1;
     for i = ng
         group_features(pos,:) = Xga_{1}(fr,ch,i);
@@ -38,9 +45,9 @@ for fr = [3,7,9,11]
     dist_group = dist_group/max(dist_group(:));
     figure
     fig = imagesc(1-dist_group);
-    if strcmp(data,'BCI2a')
+    if strcmp(data,'DI')
         set(gca,'XTick',1:numel(ng),'XTickLabel',ng,'YTick',1:numel(ng),'YTickLabel',ng)
-    elseif strcmp(data,'Giga')
+    elseif strcmp(data,'DII')
         set(gca,'XTick',1:4:22,'XTickLabel',ng(1:4:22)-1,'YTick',1:4:22,'YTickLabel',ng(1:4:22)-1)
     end
     if fr == 3
@@ -65,15 +72,16 @@ for fr = [3,7,9,11]
     
     %% scatter clusterings
     pos1 = []; pos2 = [];
-    pos=numel(ng)-1;
+    pos = numel(ng)-1;
     for i = 1:pos
         pos1 = [pos1, ng(i)*ones(1,pos)];
         pos = pos-1;
         pos2 = [pos2, flip(ng(end):ng(i)-1)];
     end
+    g_acc = zeros(numel(tmp_),1);
     for i= 1:numel(tmp_)
         g_acc(i) = mean([acc(1:pos1(i)),acc(1:pos2(i))]);
-    end    
+    end
     figure
     fig = plot(tmp_,g_acc,'b.','MarkerSize',20);
     ylim([92.5,100])

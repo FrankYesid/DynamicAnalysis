@@ -1,4 +1,15 @@
-function [acc,ks,u] = fncLassoTunning(Xf,y,tr_ind,ts_ind,param) %
+function [acc,ks,u] = fncLassoTunning(Xf,y,tr_ind,ts_ind,param) 
+%% Lasso regression
+% [acc,ks,u] = fncLassoTunning(Xf,y,tr_ind,ts_ind,param) 
+% acc - Accuracy.
+% Ks  - Confusion Matrix.
+% u   - Lasso regression.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Copyright (C) 2019 Signal Processing and Recognition Group.
+% Universidad Nacional de Colombia.
+% L.F. Velasquez-Martinez
+% F.Y. Zapata-Castaño.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Regression target
 target = mapminmax(y(tr_ind)')';
 % Lasso regression
