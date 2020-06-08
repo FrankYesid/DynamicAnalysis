@@ -29,23 +29,26 @@ dir = 'demo';
 if strcmp(data,'DI')
     %% Load relevances 
     if strcmp(method,'J')
-        load([method,filesep,data,filesep,'Rel_based_J_1sec.mat','pvt_sub']); % BCI dataset2a Rayleight-based relevances
+        load([dir,method,filesep,data,filesep,'Rel_based_J_1sec.mat','pvt_sub']); % BCI dataset2a Rayleight-based relevances
     elseif strcmp(method,'ERD')
-        load([method,filesep,data,filesep,'X_erds_class.mat'])  % BCI dataset2a ERD-based relevances
+        load([dir,method,filesep,data,filesep,'X_erds_class.mat'])  % BCI dataset2a ERD-based relevances
         pvt_sub   = {X1 X2};
     elseif strcmp(method,'Cx')
         %% Load data
+        Cx_1 = {};
         for i = 1:9
-            load([method,filesep,data,filesep,'Cx_1_sub' num2str(i) '.mat'])             % BCI dataset2a Cx-based relevances
+            load([dir,method,filesep,data,filesep,'Cx_1_sub' num2str(i) '.mat'])             % BCI dataset2a Cx-based relevances
             for c =1:2
                 tmp = Cx_1{1}{c};
-                for ch = 1:size(tmp,2); pvt_sub{c}{i}(:,ch,:) = tmp{ch}; end
+                for ch = 1:size(tmp,2) 
+                    pvt_sub{c}{i}(:,ch,:) = tmp{ch};
+                end
             end
         end
     end
     
     %% Parameters for topography 
-    load(['data',filesep,data,'electrodesBCICIV2a.mat'])        % Electrode positions
+    load(['data',filesep,data,filesep,'electrodesBCICIV2a.mat'])% Electrode positions
     database = 2;
     tex = 0;
     t_e = 10;                                                   % Electrodes size.
@@ -56,11 +59,11 @@ if strcmp(data,'DI')
 elseif strcmp(data,'DII')
     %pvt_sub = cell(1,52);
     %% Load relevances
-    name_dir = 'E:\Luisa\RESULTADOS PaperFrontiers\Results\';
+    name_dir = 'demo\';
     %% Load relevances
     if strcmp(method,'J')
-        addpath(genpath([name_dir method '\Relevances_Giga']));
-        listing = dir([name_dir method '\Relevances_Giga']);
+        addpath(genpath([name_dir method]));
+        listing = dir([name_dir method]);
         for i = 3:length(listing)
             subj = str2double(listing(i).name(12:13));
             load([listing(i).name],'Jfilt_'); 
@@ -71,10 +74,9 @@ elseif strcmp(data,'DII')
         end
     elseif strcmp(method,'ERD')
         %% DII ERD-based relevances
-        dir1 = 'E:\Luisa\RESULTADOS PaperFrontiers\Results\ERD\';
-        load([dir1 'X_erds_class_giga_b.mat'])
-        pvt_sub = {X1 X2}; clear X1 X2 
-        
+        dir1 = 'demo\';
+        load([dir1 method filesep 'X_erds_class_giga_b.mat'])
+        pvt_sub = {X1 X2}; clear X1 X2         
         load([dir1 '\X_erds_class_giga_m1.mat'])
         for sub = 1:52
             if isempty(X1{sub}); else pvt_sub{1}{sub} = X1{sub}; end 
@@ -91,7 +93,7 @@ elseif strcmp(data,'DII')
             end
         end
     elseif strcmp(method,'Cx')
-        name_dir = 'Relevancias_Giga_2020\';
+        name_dir = 'demo\';
         addpath(genpath([name_dir method]));
         listing = 1:52; listing(29) = 0; listing(34) = 0;
         for i = 1:numel(listing)

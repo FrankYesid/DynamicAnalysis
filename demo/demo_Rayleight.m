@@ -1,7 +1,6 @@
 %% Template for using the EEG analysis.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Experiment: Visualization - topotplots ERDs.
-% ERD: evente-related desynchronization/synchronization.
+% Experiment: .
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Copyright (C) 2019 Signal Processing and Recognition Group.
