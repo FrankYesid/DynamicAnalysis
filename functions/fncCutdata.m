@@ -1,13 +1,13 @@
 function Xdr = fncCutdata(Xd_,tini,tfin,fs) 
 %% Function of record signal.
 % 
-% 
-% 
-% 
-% Example:
-% 
-% 
-% 
+%% Input:
+% X2tr   - data
+% tini   - starting point
+% tfin   - ending point.
+% fs     - frecuency sof sample.
+%% Output:
+% Xdr    - Filter signal and record.
 % 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Copyright (C) 2019 Signal Processing and Recognition Group.
@@ -16,7 +16,7 @@ function Xdr = fncCutdata(Xd_,tini,tfin,fs)
 % F.Y. Zapata-Castaño.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% record 
-ini = tini*fs;%0.1*fs;
+ini = tini*fs;
 fin = tfin*fs;
 Xdr = cell(1,length(Xd_));
 for i = 1:length(Xd_)
