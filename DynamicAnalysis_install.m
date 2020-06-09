@@ -52,3 +52,5 @@ path([Dyn_DIR_Gr,'/ERD'],path);	% display and presentation
 
 disp('  --------------------- Dynamic Analysis... activated --------------------------- ');
 disp('	If you want DynamicAnalysis... permanently installed, use the command SAVEPATH. ')
+disp('It is important to add the (biosig and eeglab 14 toolbox) to the path, for data loading 
+	functions and handling of some structure functions.')
