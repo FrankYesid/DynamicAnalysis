@@ -1,6 +1,7 @@
 function [Xfreq] = fcnfiltband(X,fs,freq,n)
 %% FUNCTION rhythms
-%-------------------------------------------------------------------------
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Inputs:
 % Xf = A_filterButter(Xcell,fs)
 % X{trial}(samples x chan): Data to analysis
@@ -9,7 +10,7 @@ function [Xfreq] = fcnfiltband(X,fs,freq,n)
 % n : filter order
 % freq : vector con las bandas
 % 
-%-------------------------------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Outputs:
 % Xf: Filtered data 
 % Xf{trial}(samples x chan)
@@ -21,9 +22,8 @@ function [Xfreq] = fcnfiltband(X,fs,freq,n)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %  filter order
 if nargin < 4  
-   n = 5; % by default 
+   n = 5;   % by default 
 end
-
 % Filter desing
 wn_freq = [freq(1)/(0.5*fs) freq(2)/(0.5*fs)]; 
 % Filter

@@ -1,7 +1,7 @@
 function Xa = fncFilbank(X2tr,filter_bank,seg_start,seg_end,fs)
 %% Function of filter-bank
 %% input:
-% X2tr        - data
+% X2tr        - cell that containt the EEG trials.
 % filter_bank - specified filter.
 % seg_start   - starting point
 % seg_end     - ending point.

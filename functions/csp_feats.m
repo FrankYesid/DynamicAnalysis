@@ -1,4 +1,5 @@
 function varargout = csp_feats(C,arg2,mode,varargin)
+% 
 % csp_feats Common Spatial Pattern (csp) features.
 % 
 % PROJ = csp_feats(COVS,LABELS,'train') computes the projection matrix from 
@@ -10,6 +11,7 @@ function varargout = csp_feats(C,arg2,mode,varargin)
 % P by N array of covariance matrices COVS given the Q by P linear mapping 
 % PROJ. The rows of SCORE correspond to the N observations and the columns
 % to the Q features.
+% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Copyright (C) 2019 Signal Processing and Recognition Group.
 % Universidad Nacional de Colombia.
