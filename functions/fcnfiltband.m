@@ -6,7 +6,7 @@ function [Xfreq] = fcnfiltband(X,fs,freq,n)
 % Xf = A_filterButter(Xcell,fs)
 % X{trial}(samples x chan): Data to analysis
 % 
-% fs: Sample frequency
+% fs: sampled rate
 % n : filter order
 % freq : vector con las bandas
 % 

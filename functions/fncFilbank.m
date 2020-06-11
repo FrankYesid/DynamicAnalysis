@@ -5,6 +5,7 @@ function Xa = fncFilbank(X2tr,filter_bank,seg_start,seg_end,fs)
 % filter_bank - specified filter.
 % seg_start   - starting point
 % seg_end     - ending point.
+% fs          - sampled rate.
 %% Output:
 % Xa          - Filter signal and record.
 % 

@@ -5,7 +5,7 @@ function Xdr = fncCutdata(Xd_,tini,tfin,fs)
 % X2tr   - data
 % tini   - starting point
 % tfin   - ending point.
-% fs     - frecuency sof sample.
+% fs     - sampled rate.
 %% Output:
 % Xdr    - Filter signal and record.
 % 

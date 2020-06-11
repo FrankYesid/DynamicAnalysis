@@ -4,7 +4,7 @@ function [j] = fncRayleight(XdT,fs,twin,tseg,frl,bw,ytr,vt,vf)
 % 
 %% Input:
 % XdT   - data.
-% fs    - frecuency of sample.
+% fs    - sampled rate.
 % twin  - final time in (s).
 % tseg  - time vector.
 % fr1   - frecuencies vector.
