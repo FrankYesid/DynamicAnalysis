@@ -19,3 +19,5 @@ LICENSE					- Copyright (c) 2020, DynamicAnalysis All rights reserved.<br>
 # References:
 -- general, overview
 
+# Add necessary tools to load and organize EEG data.<br>
+- Biosig and EEGLAB.
