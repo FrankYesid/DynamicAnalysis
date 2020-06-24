@@ -17,7 +17,7 @@ LICENSE					- Copyright (c) 2020, DynamicAnalysis All rights reserved.<br>
  - /Group-level   	- functions of the estimators by groups. 
 
 # References:
--- general, overview
+-- general, overview<br>
 
-# Add necessary tools to load and organize EEG data.<br>
+Add necessary tools to load and organize EEG data.<br>
 - Biosig and EEGLAB.
